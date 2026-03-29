@@ -1,4 +1,5 @@
-/* ================= GLOBAL RESET ================= */
+/* Глобальні налаштування */
+/* Глобальне скидання маржинів та падінгів */
 h1,
 h2,
 h3,
@@ -8,6 +9,12 @@ h6,
 p {
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #434455;
+    background-color: #ffffff;
 }
 
 ul {
@@ -24,11 +31,12 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
-}
 
+}
 address {
     font-style: normal;
 }
+
 
 html {
     box-sizing: border-box;
@@ -40,48 +48,32 @@ html {
     box-sizing: inherit;
 }
 
-body {
-    font-family: "Roboto", sans-serif;
-    color: #434455;
-    background-color: #ffffff;
-}
-
-/* ================= UTILITIES ================= */
+/* Контейнер */
 .container {
     max-width: 1158px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-
-/* ================= HEADER ================= */
+/* Header*/
 .header {
     border-bottom: 1px solid #e7e9fc;
 }
 
+/* Logo+Menu+Contacts */
 .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* Menu line */
 .header-nav {
     display: flex;
     align-items: center;
 }
 
+/* Logo */
 .header-logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -90,7 +82,7 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #2e2f42;
-    padding: 24px 0;
+    padding: 25.5px 0;
     margin-right: 76px;
     display: inline-block;
 }
@@ -99,11 +91,13 @@ body {
     color: #4d5ae5;
 }
 
+/* */
 .header-menu {
     display: flex;
     gap: 40px;
 }
 
+/* Links */
 .header-link {
     font-weight: 500;
     font-size: 16px;
@@ -119,7 +113,13 @@ body {
     color: #404bbf;
 }
 
-/* ВИПРАВЛЕНО: Стилізуємо через клас, а не через address ul */
+/* Contacts */
+.header-address {
+    font-style: normal;
+    margin-left: auto;
+}
+
+/* Contacts List */
 .header-contacts-list {
     display: flex;
     gap: 40px;
@@ -137,7 +137,7 @@ body {
     color: #404bbf;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 .hero {
     background-color: #2e2f42;
     padding: 188px 0;
@@ -154,7 +154,7 @@ body {
 }
 
 .hero-button {
-    font-family: inherit;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -173,8 +173,22 @@ body {
     background-color: #404bbf;
 }
 
-/* ================= FEATURES ================= */
-.our-features {
+/* Our Features */
+
+.visually-hidden {    /* Сховав елемент*/
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.our-features{
     padding: 120px 0;
 }
 
@@ -188,36 +202,39 @@ body {
 }
 
 .features-h {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-    margin-bottom: 8px;
+    font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: #2e2f42;
+        margin-bottom: 8px;
 }
 
 .features-text {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
+    font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #434455;
 }
 
-/* ================= TEAM ================= */
+/* Team */
+
 .team {
-    background-color: #f4f4fd;
+    background: #f4f4fd;
     padding: 120px 0;
 }
 
-/* ВИПРАВЛЕНО: Прибрано padding: 120px, додано margin-bottom */
 .our-team {
-    font-size: 36px;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    text-align: center;
-    color: #2e2f42;
-    text-transform: capitalize;
-    margin-bottom: 72px;
+    font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #2e2f42;
+        margin-bottom: 72px;
 }
 
 .team-list {
@@ -226,51 +243,55 @@ body {
 }
 
 .team-item {
-    background-color: #ffffff;
-    width: calc((100% - 72px) / 4);
-    /* Тінь картки */
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        background: #fff;
+        box-shadow: 
+        0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
-    border-radius: 0px 0px 4px 4px;
+        border-radius: 0px 0px 4px 4px;
+        width: calc((100% - 72px) / 4);
 }
 
-/* ВИПРАВЛЕНО: Додано горизонтальний відступ 16px */
+.team-members{
+    font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #2e2f42;
+        margin-bottom: 8px;
+}
+
+.team-position {
+    font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #434455;
+}
+
 .team-text {
     padding: 32px 16px;
     text-align: center;
 }
 
-.team-members {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-    margin-bottom: 8px;
-}
+/* Portfolio */
 
-.team-position {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
-}
-
-/* ================= PORTFOLIO ================= */
 .portfolio {
     padding: 120px 0;
-    /* Додано відступи для всієї секції */
 }
 
 .our-portfolio {
-    font-size: 36px;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    text-align: center;
-    color: #2e2f42;
-    text-transform: capitalize;
-    margin-bottom: 72px;
+    font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #2e2f42;
+        margin-bottom: 72px;
 }
 
 .portfolio-list {
@@ -280,59 +301,62 @@ body {
     row-gap: 48px;
 }
 
-/* ВИПРАВЛЕНО: Назва тепер без помилок */
 .portfolio-item {
     width: calc((100% - 48px) / 3);
 }
 
-.portfolio-text-style {
+.portfolio-progs {
+    font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: #2e2f42;
+        margin-bottom: 8px;
+}
+
+.portfolio-text-style{
     padding: 32px 16px;
-    border: 1px solid #e7e9fc;
+    border: 1px solid #E7E9FC;
     border-top: none;
 }
 
-.portfolio-progs {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-    margin-bottom: 8px;
-}
-
 .portfolio-text {
+font-family: "Roboto", sans-serif;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
 }
 
-/* ================= FOOTER ================= */
-.footer {
-    background-color: #2e2f42;
+/* Footer */
+
+.footer{
+    background: #2e2f42;
     padding: 100px 0;
 }
 
-.footer-logo {
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #f4f4fd;
-    display: inline-block;
-    margin-bottom: 16px;
-}
-
-.footer-logo-blue {
+.footer-logo-blue{
     color: #4d5ae5;
 }
 
-.footer-slogan {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #f4f4fd;
-    max-width: 264px;
+.footer-logo{
+    font-family: "Raleway", sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #f4f4fd;
+        display: inline-block;
+        margin-bottom: 16px;
+}
+
+.footer-slogan{
+    font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #f4f4fd;
+        max-width: 264px;
 }
